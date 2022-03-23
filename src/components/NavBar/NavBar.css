@@ -1,0 +1,32 @@
+.navContainer{
+    padding: 1rem;
+}
+
+.navLogo {
+    height: 70px;
+    width: 200px;
+}
+.navContainer {
+    background-color: #ffffff;
+}
+.navItemsContainer {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.navItemsFather {
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.navItemsContainer ul li {
+    list-style-type: none;
+    margin: 0rem 2rem;
+}
+.navItemsContainer ul li a {
+    color: #000000;
+    font-weight: 600;
+    text-decoration: none;
+}
+.navItemsContainer ul li a:hover{
+    text-decoration: underline;
+    text-decoration-color: #820016;
+}
