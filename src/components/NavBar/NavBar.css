@@ -1,32 +1,37 @@
 .navContainer{
-    padding: 1rem;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    height: 80px;
+    justify-content: space-evenly;
+    padding: 0.25rem;
+    width: 100%;
 }
-
 .navLogo {
-    height: 70px;
-    width: 200px;
+    height: 50px;
+    width: 150px;
 }
-.navContainer {
-    background-color: #ffffff;
+.navItems {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0;
 }
-.navItemsContainer {
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-.navItemsFather {
-    justify-content: flex-end;
-    align-items: flex-end;
-}
-.navItemsContainer ul li {
+.navItems li {
     list-style-type: none;
-    margin: 0rem 2rem;
+    margin: 0 2rem;
 }
-.navItemsContainer ul li a {
+.navItems li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: #000000;
-    font-weight: 600;
+    font-weight: 700;
     text-decoration: none;
 }
-.navItemsContainer ul li a:hover{
+.navItems li a:hover{
     text-decoration: underline;
     text-decoration-color: #820016;
+}
+.loginIcon {
+    width: 25px;
 }

@@ -1,0 +1,11 @@
+.cartIcon {
+    width: 25px;
+}
+.cartAmount {
+    background-color: #820016;
+    width: 1rem;
+    height: 1rem;
+    padding: 0.25rem;
+    border-radius: 50%;
+    color: #fff;
+}
