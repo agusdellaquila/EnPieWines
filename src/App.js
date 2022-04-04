@@ -6,7 +6,9 @@ function App() {
   return (
     <div className="App">
       <NavBar/>
-      <ItemListContainer/>
+      <ItemListContainer category="Whisky"/>
+      <ItemListContainer category="Vino"/>
+      <ItemListContainer category="Gin"/>
     </div>
   );
 }
