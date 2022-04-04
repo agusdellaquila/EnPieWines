@@ -1,19 +1,20 @@
-import { useState } from 'react';
-import '../ItemListContainer/ItemListContainer.css'
-import ItemCount from '../ItemCount/ItemCount'
+import { useEffect, useState } from 'react';
+import ItemList from '../ItemList/ItemList';
+import { getProducts } from '../asyncMock';
 
 const ItemListContainer = (props) => {
-    const [stockAmount, setStock] = useState(10);
+    const [products, setProducts] = useState([])
 
-    const onAddHandler = (count) => {
-        alert('se agregaron ' + count + ' items al carro');
-    }
-
+    useEffect( () => {
+        getProducts().then(prods => {
+            setProducts(prods)
+        }).catch(error => {
+            console.log(error)
+        })
+    })
     return (
-        <div className='ItemListCard'>
-            <h2 className="centered">{props.greeting}</h2>
-            <img src={props.img} width='300px'></img>
-            <ItemCount stock={stockAmount} onAdd={onAddHandler}></ItemCount>
+        <div>
+            <ItemList products={products}/>
         </div>
     )
 }
