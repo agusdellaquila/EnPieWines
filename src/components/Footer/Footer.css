@@ -1,0 +1,30 @@
+.footer {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr 1.25fr; 
+    grid-template-rows: 0.1fr 1fr; 
+    gap: 0px 0px;
+    place-items: center; 
+    height: max-content;
+    background-color: #8200161e;
+    padding: 2rem 0;
+}
+
+.footer h3 {
+    color: #820016;
+    text-align: left;
+}
+
+.footer ul {
+    padding: 0;
+}
+
+.footer ul li {
+    list-style-type: none;
+}
+
+.footerInput {
+    width: 200px;
+    height: 30px;
+    border: 2px solid #820016;
+    border-radius: 5px;
+}
