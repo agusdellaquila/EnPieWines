@@ -13,7 +13,6 @@
 }
 .navItems {
     display: flex;
-    justify-content: space-evenly;
     padding: 0;
 }
 .navItems li {

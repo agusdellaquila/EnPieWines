@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import '../Item/Item.css'
 
 const Item = (props) => {
@@ -6,7 +7,9 @@ const Item = (props) => {
             <img className='ItemImg' src={props.image} alt={props.title}></img>
             <h3>{props.title}</h3>
             <p>${props.price}</p>
-            <button className="btn btnPrimary">Ver mas</button>
+            <Link to={`/detail/${props.id}`}>
+                <button className="btn btnPrimary">Ver mas</button>
+            </Link>
         </div>
     )
 }

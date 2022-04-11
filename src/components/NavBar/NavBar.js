@@ -1,4 +1,5 @@
 import '../NavBar/NavBar.css'
+import { Link, NavLink } from 'react-router-dom'
 import logo from '../../logo.png';
 import login from '../NavBar/UserLogInIcon.svg'
 import CartWidget from '../CartWidget/CartWidget'
@@ -6,30 +7,32 @@ import CartWidget from '../CartWidget/CartWidget'
 const Navbar = () => {
     return(
         <nav className="navContainer">
-            <img src={logo} className="navLogo" alt="enPie logo"/>
+            <Link to="/">
+                <img src={logo} className="navLogo" alt="enPie logo"/>
+            </Link>
 
             <ul className="navItems">
                 <li>
-                    <a href="#">Inicio</a>
+                    <NavLink to="/">Inicio</NavLink>
                 </li>
                 <li>
-                    <a href="#">Vinos</a>
+                    <NavLink to="/item/vino">Vinos</NavLink>
                 </li>
                 <li>
-                    <a href="#">Champagne</a>
+                    <NavLink to="/item/champagne">Champagne</NavLink>
                 </li>
                 <li>
-                    <a href="#">Cervezas</a>
+                    <NavLink to="/item/cerveza">Cervezas</NavLink>
                 </li>
                 <li>
-                    <a href="#">Whisky</a>
+                    <NavLink to="/item/whisky">Whisky</NavLink>
                 </li>
                 <li>
-                    <a href="#">Spirits</a>
+                    <NavLink to="/item/gin">Gin</NavLink>
                 </li>
             </ul>
 
-            <CartWidget/>
+            <CartWidget CartAmount="6"/>
 
             <img src={login} className="loginIcon"/>
         </nav>
