@@ -1,0 +1,32 @@
+.detail {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    place-items: center;
+}
+
+.detailInfo {
+    display: grid; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr 1fr 1fr; 
+    gap: 0px 0px;
+    place-items: center;
+}
+
+.detailInfoDescription {
+    text-align: center;
+    padding: 0 3rem;
+}
+
+.detailInfoPrice {
+    background-color: #820016;
+    color: white;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 10px;
+}
+
+.detail img{
+        width: 500px;
+    }

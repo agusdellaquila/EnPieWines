@@ -1,3 +1,4 @@
+import '../ItemDetailContainer/ItemDetailContainer.css'
 import ItemDetail from '../ItemDetail/ItemDetail';
 import { getProductsById } from '../asyncMock';
 import { useEffect, useState } from 'react';
@@ -15,14 +16,10 @@ const ItemDetailContainer = () => {
         }).catch(error => {
             console.log(error)
         })
-
-        // return (() => {
-        //     setProductId()
-        // }) 
     }, [id])
 
     return (
-        <div>
+        <div className="detailContainer">
             {productsById ? <ItemDetail {...productsById}/> : <NotFound/>}
         </div>
     )

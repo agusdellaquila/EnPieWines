@@ -1,12 +1,13 @@
+import '../ItemDetail/ItemDetail.css'
 const ItemDetail = ({image, title, description, price}) => {
 
     return (
-        <div>
+        <div className="detail">
             <img src={image}/>
-            <div>
+            <div className='detailInfo'>
                 <h3>{title}</h3>
-                <p>{description}</p>
-                <p>${price}</p>
+                <p className='detailInfoDescription'>{description}</p>
+                <p className='detailInfoPrice'>${price}</p>
             </div>
         </div>
     )
