@@ -1,10 +1,14 @@
 import '../NavBar/NavBar.css'
 import { Link, NavLink } from 'react-router-dom'
+import { useContext } from 'react'
+import CartContext from '../CartContext/CartContext'
 import logo from '../../logo.png';
 import login from '../NavBar/UserLogInIcon.svg'
 import CartWidget from '../CartWidget/CartWidget'
 
 const Navbar = () => {
+    const { getQuantity } = useContext(CartContext)
+
     return(
         <nav className="navContainer">
             <Link to="/">
@@ -32,7 +36,7 @@ const Navbar = () => {
                 </li>
             </ul>
 
-            <Link to="/carrito"><CartWidget CartAmount="6"/></Link>
+            <Link to="/carrito"><CartWidget CartAmount={getQuantity}/></Link>
 
             <img src={login} className="loginIcon"/>
         </nav>

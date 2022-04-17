@@ -1,30 +1,30 @@
 import { useState } from 'react'
 import '../ItemCount/ItemCount.css'
 
-const ItemCount = (props) => {
-    const [count, setCount] = useState(1) //inicializo en 1 el counter
+const ItemCount = ({onConfirm, stock, initial=0}) => {
+    const [count, setCount] = useState(initial)
 
-    // const incremento = () => {
-    //     if (count < props.stock) {
-    //         setCount(count + 1);
-    //     }
-    // }
+    const increment = () => {
+        if (count < stock) {
+            setCount(count + 1) 
+        }
+    }
 
-    // const decremento = () => {
-    //     if (count > 1) {
-    //         setCount(count - 1);
-    //     }
-    // }
+    const decrement = () => {
+        if (count > 0) {
+            setCount(count - 1)
+        }
+    }
 
     return (
         <div className="ItemCountContainer mt4">
             <div className="ItemCountPanel">
-                {/* <button onClick={decremento} className="btnCountMasMenos">-</button> */}
+                <button onClick={decrement} className="btnCountMasMenos">-</button>
                 <p>{count}</p>
-                {/* <button onClick={incremento} className="btnCountMasMenos">+</button> */}
+                <button onClick={increment} className="btnCountMasMenos">+</button>
             </div>
             <div className="dividerLine"></div>
-            <button onClick={() => props.onAdd(count)} className="btn btnPrimary btnAddToCart">Agregar al carrito</button>
+            <button onClick={() => onConfirm(count)} className="btn btnPrimary btnAddToCart">Agregar al carrito</button>
         </div>
     )
 }

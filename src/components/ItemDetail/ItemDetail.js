@@ -7,17 +7,20 @@ import ItemCount from '../ItemCount/ItemCount'
 const ItemDetail = ({id, image, title, description, price, stock}) => {
     const [quantity, setQuantity] = useState(0)
 
-    const { cart, setCart } = useContext(CartContext) //agarro los valores del context
+    const { cart, addItem, getQuantity } = useContext(CartContext) //agarro los valores del context
+
+    {console.log(cart)}
 
     const handleAdd = (count) => {
-        console.log(count)
         setQuantity(count)
 
         const productObj = {
             id, title, price,
         }
 
-        setCart([...cart, {...productObj, quantity: count}])
+        addItem([...cart, {...productObj, quantity: count}])
+
+        console.log(getQuantity())
     }
 
     return (
@@ -29,7 +32,7 @@ const ItemDetail = ({id, image, title, description, price, stock}) => {
                 <p className='detailInfoPrice'>${price}</p>
                 <p>Stock: {stock}</p>
             </div>
-            {quantity > 0 ? <Link to='/carrito'>Ver el carrito</Link> : <ItemCount stock={stock} onAdd={handleAdd}/>}
+            {quantity > 0 ? <Link to='/carrito'>Ver el carrito</Link> :  <ItemCount onConfirm={handleAdd} stock={stock}/>}
         </div>
     )
 }
