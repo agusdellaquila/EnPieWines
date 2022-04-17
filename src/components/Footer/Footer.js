@@ -1,5 +1,6 @@
 import '../Footer/Footer.css'
 import { Link } from 'react-router-dom'
+import Socials from '../Socials/Socials'
 
 const Footer = () => {
     return (
@@ -12,13 +13,13 @@ const Footer = () => {
             <div>
                 <ul className='altFont'>
                     <li>
-                        Sobre Nosotros
+                        <Link to="/SobreNosotros">Sobre Nosotros</Link>
                     </li>
                     <li>
-                        Términos y condiciones
+                        <Link to="/TerminosYCondiciones">Términos y condiciones</Link>
                     </li>
                     <li>
-                        Política de Privacidad
+                        <Link to="/PoliticaDePrivacidad">Política de Privacidad</Link>
                     </li>
                     <li>
                         Preguntas Frecuentes
@@ -41,7 +42,7 @@ const Footer = () => {
                         Pedidos
                     </li>
                     <li>
-                        Carrito
+                        <Link to="/carrito">Carrito</Link>
                     </li>
                     <li>
                         Finalizar la compra
@@ -52,7 +53,7 @@ const Footer = () => {
             <div>
                 <ul className='altFont'>
                     <li>
-                        <Link to="/SobreNosotros">Sobre Nosotros</Link>
+                        Contacto
                     </li>
                 </ul>
                 <section className='altFont'>
@@ -67,6 +68,8 @@ const Footer = () => {
 
             <div>
                 <section className='altFont'>
+                    <Socials/> 
+                    
                     <h5>Recibí nuestras ofertas!</h5>
                     
                     <input className='footerInput' placeholder='Ingresa tu Email'></input>

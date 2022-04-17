@@ -137,11 +137,23 @@ body {
     background-color: #ffffff;
     width: max-content;
     height: max-content;
-    padding: 1rem;
 }
 .btnPrimary:hover {
     color: #ffffff;
     background-color: #820016;
+}
+.btnSecondary {
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #d57283;
+    width: max-content;
+    height: max-content;
+    border-radius: 5px;
+}
+.btnSecondary:hover {
+    color: #820016;
+    background-color: #ffffff;
+    border-radius: 5px;
 }
 /* _______________________margins */
 /* ______________margin start*/
@@ -329,4 +341,10 @@ body {
 .dividerLine {
     height: 2px;
     background-color: #820016;
+}
+
+.contentContainer {
+    width: 70%;
+    /* text-align: center; */
+    margin: 0 auto;
 }

@@ -32,7 +32,7 @@ const Navbar = () => {
                 </li>
             </ul>
 
-            <CartWidget CartAmount="6"/>
+            <Link to="/carrito"><CartWidget CartAmount="6"/></Link>
 
             <img src={login} className="loginIcon"/>
         </nav>

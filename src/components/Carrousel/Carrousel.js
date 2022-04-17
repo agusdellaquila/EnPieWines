@@ -1,6 +1,7 @@
 import '../Home/Home.css'
 import '@splidejs/react-splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
+import { Link } from 'react-router-dom'
 
 const Carrousel = () => {
     return (
@@ -12,13 +13,13 @@ const Carrousel = () => {
             }}
             >
                 <SplideSlide className='centered'>
-                    <img src='../images/banners/bannerChampagne.png'/>
+                    <Link to="/item/champagne"><img src='../images/banners/bannerChampagne.png'/></Link>
                 </SplideSlide>
                 <SplideSlide className='centered'>
-                    <img src='../images/banners/bannerOfertas.png'/>
+                    <Link to="/item/whisky"><img src='../images/banners/bannerOfertas.png'/></Link>
                 </SplideSlide>
                 <SplideSlide className='centered'>
-                    <img src='../images/banners/bannerVinos.png'/>
+                    <Link to="/item/vino"><img src='../images/banners/bannerVinos.png'/></Link>
                 </SplideSlide>
             </Splide>
         </div>

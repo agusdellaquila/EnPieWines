@@ -79,6 +79,33 @@ const products = [
         price: 3500,
         description: 'Gin Caorunn es  una ginebra Premium  obtenida por destilación tradicional por lotes, con un solo alambique de cobre Berry.',
         category: 'gin',
+    },
+    {
+        id: '10',
+        title: 'Don Perignon',
+        image: "http://cdn.shopify.com/s/files/1/0995/6758/products/dom-perignon-sparkling-dom-perignon-29369628033221.png?v=1627061079",
+        stock: 30,
+        price: 65000,
+        description: 'Nariz muy elegante y compleja, en la que aparecen aromas a flores blancas, ligeros tonos especiados, recuerdos de bollería y frutos secos y sutiles ahumados. Amplio y voluptuoso en boca. Recuerdos de hinojo y fruta blanca. Muy largo y maravillosamente equilibrado.',
+        category: 'champagne',
+    },
+    {
+        id: '11',
+        title: 'Krug',
+        image: "https://www.vinatis.es/45516-detail_default/champagne-krug-magnum-grande-cuvee-edition-166-estuche-lujo.png",
+        stock: 30,
+        price: 62000,
+        description: 'Fundada en 1843, Krug es una de las pocas casas de Champagne que se concentra en producir solamente champanes de prestigio. Este Grande Cuvée presenta una finísima burbuja. La nariz arranca con aromas de gran intensidad: frutas blancas de excelente calidad, notas de mantequilla y finísima pastelería.',
+        category: 'champagne',
+    },
+    {
+        id: '12',
+        title: 'Moett Festive',
+        image: "https://gullliquorstore.com/wp-content/uploads/2020/10/4867_moet_gold_eoy_750ml.png",
+        stock: 30,
+        price: 40000,
+        description: 'Color amarillo pajizo con destellos verdosos. Flores blancas, manzana verde, brioche y cereles. Notas de grosella. Final largo y persistente.',
+        category: 'champagne',
     }
 ]
 
