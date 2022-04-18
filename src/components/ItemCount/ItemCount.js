@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import '../ItemCount/ItemCount.css'
 
-const ItemCount = ({onConfirm, stock, initial=0}) => {
+const ItemCount = ({onConfirm, stock, initial=1}) => {
     const [count, setCount] = useState(initial)
 
     const increment = () => {
@@ -11,7 +11,7 @@ const ItemCount = ({onConfirm, stock, initial=0}) => {
     }
 
     const decrement = () => {
-        if (count > 0) {
+        if (count > initial) {
             setCount(count - 1)
         }
     }

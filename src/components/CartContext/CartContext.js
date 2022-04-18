@@ -5,20 +5,29 @@ const CartContext = createContext()
 
 export const CartContextProvider = ( { children } ) => {
     //state del cart array
-    const [cart, setCart] = useState([]) 
+    let [cart, setCart] = useState([]) 
 
     //funciones de logica del carro
     const addItem = (productToAdd) => {
-        setCart([...cart, productToAdd])
+            setCart([...cart, productToAdd])
+    }
+
+    const agregarCantidad = (id, count) => {
+        cart = cart.map( prod => {
+            if (prod.id === id) {
+                return {...prod, quantity: prod.quantity + count, totalPrice: ((prod.quantity + count)*prod.price)}
+            } else return prod
+        })
+        setCart(cart)
     }
 
     const isInCart = (id) => {
-        return cart.some( prod => prod.id === id)
+        return cart.some(prod => prod.id === id)
     }
 
     const getQuantity = () => {
         let count = 0
-        cart.forEach( prod => {
+        cart.forEach( (prod) => {
             count += prod.quantity
         })
         return count
@@ -38,6 +47,7 @@ export const CartContextProvider = ( { children } ) => {
             {  
                 cart,
                 addItem,
+                agregarCantidad,
                 isInCart,
                 getQuantity,
                 removeItem,
