@@ -3,17 +3,16 @@
     align-items: center;
     background-color: transparent;
     height: 80px;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 0.25rem;
     width: 100%;
 }
 .navLogo {
-    height: 50px;
-    width: 150px;
+    height: 30px;
+    width: 95px;
 }
 .navItems {
-    display: flex;
-    padding: 0;
+    display: none;
 }
 .navItems li {
     list-style-type: none;
@@ -33,4 +32,26 @@
 }
 .loginIcon {
     width: 25px;
+}
+
+@media (min-width: 1024px){
+    .navContainer{
+        display: flex !important;
+        align-items: center;
+        background-color: transparent;
+        height: 80px;
+        justify-content: space-evenly;
+        padding: 0.25rem;
+        width: 100%;
+    }
+
+    .navItems {
+        display: flex !important;
+        padding: 0;
+    }
+
+    .navLogo {
+        height: 55px !important;
+        width: 170px !important;
+    }
 }

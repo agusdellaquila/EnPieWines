@@ -8,8 +8,11 @@ const Carrousel = () => {
         <div className='centered mt5'>
             <Splide className='carrousel'
             options={ {
+            type: 'slide',
+            speed: 100,
+            rewindSpeed: 300,
+            autoplay: true,
             rewind: true,
-            autoScroll: true,
             }}
             >
                 <SplideSlide className='centered'>

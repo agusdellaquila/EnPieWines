@@ -1,13 +1,25 @@
 import '../NavBar/NavBar.css'
 import { Link, NavLink } from 'react-router-dom'
-import { useContext } from 'react'
+import { useState, useEffect, useContext } from 'react'
+import { firestoreDb } from '../../services/firebase'
+import { getDocs, collection, query } from 'firebase/firestore'
 import CartContext from '../CartContext/CartContext'
 import logo from '../../logo.png';
 import login from '../NavBar/UserLogInIcon.svg'
 import CartWidget from '../CartWidget/CartWidget'
 
 const Navbar = () => {
+    const [categories, setCategories] = useState([])
     const { getQuantity } = useContext(CartContext)
+
+    useEffect(() => {
+        getDocs(query(collection(firestoreDb, 'categories'))).then(response => {
+        const categories = response.docs.map(doc => {
+            return { id: doc.id, ...doc.data()}
+        })
+        setCategories(categories)
+        })
+    }, [])
 
     return(
         <nav className="navContainer">
@@ -19,26 +31,16 @@ const Navbar = () => {
                 <li>
                     <NavLink to="/">Inicio</NavLink>
                 </li>
+                { categories.map(cat => 
                 <li>
-                    <NavLink to="/item/vino">Vinos</NavLink>
+                    <NavLink key={cat.id} to={`/item/${cat.id}`}className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>{cat.description}</NavLink>
                 </li>
-                <li>
-                    <NavLink to="/item/champagne">Champagne</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/item/cerveza">Cervezas</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/item/whisky">Whisky</NavLink>
-                </li>
-                <li>
-                    <NavLink to="/item/gin">Gin</NavLink>
-                </li>
+                )}
             </ul>
 
-            <Link to="/carrito"><CartWidget CartAmount={getQuantity}/></Link>
+            { getQuantity() === 0 ? null : <Link to="/carrito" className="noUnderline"><CartWidget CartAmount={getQuantity}/></Link> }
 
-            <img src={login} className="loginIcon"/>
+            <img src={login} className="loginIcon" alt="login"/>
         </nav>
     )
 }

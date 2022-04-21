@@ -9,7 +9,7 @@
 .detailInfo {
     display: grid; 
     grid-template-columns: 1fr; 
-    grid-template-rows: 1fr 1fr 1fr; 
+    grid-template-rows: 1fr; 
     gap: 0px 0px;
     place-items: center;
 }
@@ -27,5 +27,6 @@
 }
 
 .detail img{
-        width: 500px;
+        width: 100%;
+        height: auto;
     }

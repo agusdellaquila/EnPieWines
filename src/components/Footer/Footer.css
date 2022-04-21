@@ -1,7 +1,7 @@
 .footer {
     display: grid; 
-    grid-template-columns: 1fr 1fr 1fr 1.25fr; 
-    grid-template-rows: 0.1fr 1fr; 
+    grid-template-columns: 1fr; 
+    grid-template-rows: 1fr; 
     gap: 0px 0px;
     place-items: center; 
     height: max-content;
@@ -26,4 +26,29 @@
     width: 200px;
     height: 30px;
     border: 2px solid #820016;
+}
+
+@media (min-width: 1024px){
+    .footer {
+        display: grid !important; 
+        grid-template-columns: 1fr 1fr 1fr 1.25fr !important; 
+        grid-template-rows: 0.11fr 1fr !important; 
+        gap: 0px 0px;
+        grid-template-areas: 
+        "t1 t2 t3 t4"
+        "c1 c2 c3 c4"; 
+        place-items: center; 
+        height: max-content;
+        background-color: #8200161e;
+        padding: 2rem 0;
+    }
+
+    .t1 { grid-area: t1; }
+    .t2 { grid-area: t2; }
+    .t3 { grid-area: t3; }
+    .t4 { grid-area: t4; }
+    .c1 { grid-area: c1; }
+    .c2 { grid-area: c2; }
+    .c3 { grid-area: c3; }
+    .c4 { grid-area: c4; }
 }
