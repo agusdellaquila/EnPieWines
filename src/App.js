@@ -11,6 +11,7 @@ import Footer from './components/Footer/Footer'
 import Carrito from './components/Carrito/Carrito'
 import TerminosYCondiciones from './components/TerminosYCondiciones/TerminosYCondiciones'
 import PoliticaDePrivacidad from './components/PoliticaDePrivacidad/PoliticaDePrivacidad'
+import Checkout from './components/Checkout/Checkout'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
                   <Route path='/SobreNosotros' element={<SobreNosotros/>}/>
                   <Route path='/TerminosYCondiciones' element={<TerminosYCondiciones/>}/>
                   <Route path='/PoliticaDePrivacidad' element={<PoliticaDePrivacidad/>}/>
+                  <Route path='/checkout' element={<Checkout/>}/>
                 </Routes>
 
             </header>

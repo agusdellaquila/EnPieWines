@@ -38,7 +38,7 @@ const Navbar = () => {
                 )}
             </ul>
 
-            { getQuantity() === 0 ? null : <Link to="/carrito" className="noUnderline"><CartWidget CartAmount={getQuantity}/></Link> }
+            <Link to="/carrito" className="noUnderline"><CartWidget CartAmount={getQuantity}/></Link>
 
             <img src={login} className="loginIcon" alt="login"/>
         </nav>

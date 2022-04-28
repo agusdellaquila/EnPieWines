@@ -1,0 +1,89 @@
+.checkoutFormContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+}
+
+.checkoutInput {
+    background-color: #e2e2e2;
+    border: none;
+    border-radius: 5px;
+    width: 350px;
+    height: 25px;
+}
+
+.checkoutFont {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-weight: bold;
+}
+
+.checkoutObligatory {
+    color: #820016;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(10, 0.1fr);
+    gap: 0px 20px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "Nombre Nombre"
+        "Apellido Apellido"
+        "Correo Correo"
+        "Telefono Telefono"
+        "Empresa Empresa"
+        "Pais Pais"
+        "Direccion Direccion"
+        "Provincia Provincia"
+        "Localidad Localidad"
+        "CodigoPostal CodigoPostal";
+}
+
+.container div {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.Empresa {
+    grid-area: Empresa;
+}
+
+.Nombre {
+    grid-area: Nombre;
+}
+
+.Apellido {
+    grid-area: Apellido;
+}
+
+.Pais {
+    grid-area: Pais;
+}
+
+.Direccion {
+    grid-area: Direccion;
+}
+
+.Provincia {
+    grid-area: Provincia;
+}
+
+.Localidad {
+    grid-area: Localidad;
+}
+
+.Correo {
+    grid-area: Correo;
+}
+
+.Telefono {
+    grid-area: Telefono;
+}
+
+.CodigoPostal {
+    grid-area: CodigoPostal;
+}
