@@ -1,4 +1,6 @@
 import { createContext, useState } from 'react'
+import { getDocs, query, writeBatch, collection, where, documentId, addDoc } from 'firebase/firestore'
+import { firestoreDb } from '../../services/firebase';
 
 //createContext
 const CartContext = createContext()
@@ -50,6 +52,40 @@ export const CartContextProvider = ( { children } ) => {
         setCart([])
     }
 
+    const createOrder = (objOrder) => {
+        const ids = cart.map(prod => prod.id) //array de ids de productos que esten cargados en el carro
+        const batch = writeBatch(firestoreDb)
+        const collectionRef = collection(firestoreDb, 'products')
+        const outOfStock = []
+        getDocs(query(collectionRef, where(documentId(), 'in', ids)))
+            .then(response => {
+                response.docs.forEach(doc => {
+                    const dataDoc = doc.data()
+                    const prodQuantity = cart.find(prod => prod.id === doc.id)?.quantity
+                    if(dataDoc.stock >= prodQuantity) {
+                        batch.update(doc.ref, {stock: dataDoc.stock - prodQuantity})
+                    } else {
+                        outOfStock.push({id: doc.id, ...dataDoc})
+                    }
+                })
+            }).then (() => {
+                if (outOfStock.length === 0) {
+                    const collectionRef = collection(firestoreDb, 'orders')
+                    return addDoc(collectionRef, objOrder)
+                } else {
+                    return Promise.reject({name: 'outOfStockError', products: outOfStock})
+                }
+            }).then(({ id }) => {
+                batch.commit()
+                console.log('el ID de la orden es: ' + id)
+            }).catch(error => {
+                console.log('error')
+            })
+            // .finally(() => {
+            //     setLoading(false)
+            // })
+    }
+
     return (
         <CartContext.Provider value={ 
             {  
@@ -60,7 +96,8 @@ export const CartContextProvider = ( { children } ) => {
                 getQuantity,
                 getCartTotal,
                 removeItem,
-                clearCart
+                clearCart,
+                createOrder
             }
         }>
             { children }

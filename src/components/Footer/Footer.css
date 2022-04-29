@@ -5,12 +5,12 @@
     gap: 0px 0px;
     place-items: center; 
     height: max-content;
-    background-color: #8200161e;
+    background-color: #820016;
     padding: 2rem 0;
+    color: #ffffff;
 }
 
 .footer h3 {
-    color: #820016;
     text-align: left;
 }
 
@@ -20,6 +20,10 @@
 
 .footer ul li {
     list-style-type: none;
+}
+
+.footer ul li a {
+    color: #ffffff;
 }
 
 .footerInput {
@@ -39,8 +43,9 @@
         "c1 c2 c3 c4"; 
         place-items: center; 
         height: max-content;
-        background-color: #8200161e;
+        background-color: #820016;
         padding: 2rem 0;
+        color: #ffffff;
     }
 
     .t1 { grid-area: t1; }
