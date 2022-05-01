@@ -1,8 +1,11 @@
 import '../Footer/Footer.css'
 import { Link } from 'react-router-dom'
+import { useNotification } from '../NotificationContext/NotificationContext'
 import Socials from '../Socials/Socials'
 
 const Footer = () => {
+    const { setNotification } = useNotification()
+    //usar la noti para el emial
     return (
         <div className="footer mt5">
             <h3 className='t1'>En Pie</h3>

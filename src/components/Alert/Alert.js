@@ -1,17 +1,13 @@
 import '../Alert/Alert.css'
 
-const Alert = ({title, description, button, extra, func, styles}) => {
+const Alert = ({title, description, extra, funcAlert }) => {
     return (
-        <div style={styles}>
-            <div className="alertContainer dFlexCol centered">
-                <p className="fs5">{title}</p>
-                <p className="fs5 altFont alertDescription">{description}</p>
-                <div className='dFlex'>
-                    <input placeholder='Ingrese su email'></input>
-                    <button className='btn btnSecondary'>{button}</button>
-                </div>
+        <div>
+            <div className="alert dFlexCol centered">
+                <p className="fs5 mt3">{title}</p>
+                <p className="fs5 altFont alertDescription centered">{description}</p>
                 <p className='fs7 altFont'>{extra}</p>
-                <button className='btn btnSecondary alertClose' onClick={() => {func(false)}}>X</button>
+                <button className='btn btnSecondary alertClose' onClick={() => {funcAlert(false)}}>X</button>
             </div>
         </div>
     )

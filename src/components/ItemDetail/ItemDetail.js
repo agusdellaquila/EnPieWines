@@ -1,13 +1,16 @@
 import '../ItemDetail/ItemDetail.css'
 import { Link } from 'react-router-dom'
 import { useState, useContext } from 'react'
+import { useNotification } from '../NotificationContext/NotificationContext'
 import CartContext from '../CartContext/CartContext'
 import ItemCount from '../ItemCount/ItemCount'
 
 const ItemDetail = ({id, image, title, description, price, stock}) => {
     const [quantity, setQuantity] = useState(0)
 
-    const { addItem, isInCart, agregarCantidad } = useContext(CartContext) //agarro los valores del context
+    const { addItem, isInCart, agregarCantidad } = useContext(CartContext)
+    
+    const { setNotification } = useNotification()
 
     const handleAdd = (count) => {
         setQuantity(count)
@@ -20,6 +23,7 @@ const ItemDetail = ({id, image, title, description, price, stock}) => {
             }
 
             addItem({...productObj, quantity: count, totalPrice: (count*price)})
+            setNotification(`Se agregaron ${count} ${title} al carrito`, 'success')
         }
 
     }
@@ -34,7 +38,6 @@ const ItemDetail = ({id, image, title, description, price, stock}) => {
                 {quantity > 0 ? <Link to='/carrito' className='noUnderline accentFontColor btnPrimary'><p className='fs5 p2'>Ver el carrito</p></Link> :  <ItemCount onConfirm={handleAdd} stock={stock}/>}
             </div>
             <div><p>Stock: {stock}</p></div>
-            {/* {quantity > 0 ? <Link to='/carrito' className='noUnderline accentFontColor btnPrimary'><p className='fs5 p2'>Ver el carrito</p></Link> :  <ItemCount onConfirm={handleAdd} stock={stock}/>} */}
         </div>
     )
 }

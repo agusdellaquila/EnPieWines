@@ -6,10 +6,12 @@ import { firestoreDb } from '../../services/firebase';
 const CartContext = createContext()
 
 export const CartContextProvider = ( { children } ) => {
-    //state del cart array
     let [cart, setCart] = useState([]) 
 
-    //funciones de logica del carro
+    const [purchaseId, setPurchaseId] = useState('')
+
+    const [loading, setLoading] = useState(true)
+
     const addItem = (productToAdd) => {
             setCart([...cart, productToAdd])
     }
@@ -52,6 +54,14 @@ export const CartContextProvider = ( { children } ) => {
         setCart([])
     }
 
+    const spinner = () => {
+        return loading
+    }
+
+    const showOrderId = () => {
+        return purchaseId
+    }
+
     const createOrder = (objOrder) => {
         const ids = cart.map(prod => prod.id) //array de ids de productos que esten cargados en el carro
         const batch = writeBatch(firestoreDb)
@@ -76,14 +86,15 @@ export const CartContextProvider = ( { children } ) => {
                     return Promise.reject({name: 'outOfStockError', products: outOfStock})
                 }
             }).then(({ id }) => {
+                //.id es el de la orden
+                objOrder.buyer = {...objOrder.buyer, purchaseId: id}
+                console.log(objOrder)
+                setPurchaseId(id)
+                setLoading(false)
                 batch.commit()
-                console.log('el ID de la orden es: ' + id)
             }).catch(error => {
-                console.log('error')
+                console.log('ERROR')
             })
-            // .finally(() => {
-            //     setLoading(false)
-            // })
     }
 
     return (
@@ -97,7 +108,9 @@ export const CartContextProvider = ( { children } ) => {
                 getCartTotal,
                 removeItem,
                 clearCart,
-                createOrder
+                createOrder,
+                showOrderId,
+                spinner
             }
         }>
             { children }

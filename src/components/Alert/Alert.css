@@ -1,10 +1,10 @@
-.alertContainer {
+.alert {
     width: 650px;
     height: 250px;
     background-color: #ffffff;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -12,13 +12,14 @@
 }
 
 .alertDescription {
-    width: 400px;
+    width: 500px;
+    text-align: center;
 }
 
 .alertClose {
-    position: relative;
-    top: -80%;
-    left: 50%;
+    position: absolute;
+    top: 10%;
+    left: 96%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
     margin-right: 10px;

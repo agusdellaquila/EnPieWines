@@ -5,9 +5,18 @@ import CheckoutCartView from '../CheckoutCartView/CheckoutCartView'
 
 const Checkout = () => {
     return (
-        <div className='checkoutContainer'>
-            <CheckoutForm/>
-            <CheckoutCartView/>
+        <div>
+            <p className='fs3 centered'>Checkout</p>
+            <div className='checkoutContainer'>
+                <div></div>
+                <div>
+                    <CheckoutForm/>
+                </div>
+                <div>
+                    <CheckoutCartView/>
+                </div>
+                <div></div>
+            </div>
         </div>
     )
 }

@@ -1,6 +1,7 @@
 import './Atoms.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { CartContextProvider } from './components/CartContext/CartContext'
+import { NotificationProvider } from './components/NotificationContext/NotificationContext'
 import NavBar from './components/NavBar/NavBar'
 import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer'
@@ -16,31 +17,29 @@ import Checkout from './components/Checkout/Checkout'
 function App() {
   return (
     <div className="App">
-      <CartContextProvider>
-        <BrowserRouter>
-            <header>
-                <NavBar/>
-                <Routes>
-                  <Route path='/' element={<Home/>}/>	
-                  <Route path='/item/:category' element={<ItemListContainer/>}/>
-                  <Route path='/detail/:id' element={<ItemDetailContainer/>}/>
-                  <Route path='*' element={<NotFound/>}/>
-                  <Route path='/carrito' element={<Carrito/>}/>
-                  <Route path='/SobreNosotros' element={<SobreNosotros/>}/>
-                  <Route path='/TerminosYCondiciones' element={<TerminosYCondiciones/>}/>
-                  <Route path='/PoliticaDePrivacidad' element={<PoliticaDePrivacidad/>}/>
-                  <Route path='/checkout' element={<Checkout/>}/>
-                </Routes>
-
-            </header>
-            <main>
-
-            </main>
-            <footer>
-              <Footer/>
-            </footer>
-        </BrowserRouter>
-      </CartContextProvider>
+      <NotificationProvider>
+        <CartContextProvider>
+          <BrowserRouter>
+              <header>
+                  <NavBar/>
+                  <Routes>
+                    <Route path='/' element={<Home/>}/>	
+                    <Route path='/item/:category' element={<ItemListContainer/>}/>
+                      <Route path='/detail/:id' element={<ItemDetailContainer/>}/>
+                    <Route path='*' element={<NotFound/>}/>
+                      <Route path='/carrito' element={<Carrito/>}/>
+                    <Route path='/SobreNosotros' element={<SobreNosotros/>}/>
+                    <Route path='/TerminosYCondiciones' element={<TerminosYCondiciones/>}/>
+                    <Route path='/PoliticaDePrivacidad' element={<PoliticaDePrivacidad/>}/>
+                      <Route path='/checkout' element={<Checkout/>}/>
+                  </Routes>
+              </header>
+                <footer>
+                  <Footer/>
+                </footer>
+          </BrowserRouter>
+        </CartContextProvider>
+      </NotificationProvider>
     </div>
   );
 }

@@ -1,30 +1,72 @@
 import '../CheckoutForm/CheckoutForm.css'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import CartContext from '../CartContext/CartContext'
+import Alert from '../Alert/Alert';
+import Spinner from '../Spinner/Spinner';
 
 const CheckoutForm = () => {
-    const { cart, getCartTotal, createOrder} = useContext(CartContext)
+    const { cart, getCartTotal, createOrder, showOrderId, spinner } = useContext(CartContext)
+
+    const [alert, setAlert] = useState(false)
     
     let objOrder = {
         items: cart,
         total: getCartTotal(),
-        date: new Date(),
-        country: 'Argentina',
+        buyer: {
+            country: 'Argentina',
+        },
+        date: new Date()
+
     }
+
+    // const handleValidation = (objOrder) => {
+    //     let fields = {...objOrder}
+    //     let errors = {
+    //         empty: '',
+    //         onlyLetters: ''
+    //     }
+    //     let validForm = true;
+
+    //     if ((fields['name'] === ' ') || (fields['surname'] === ' ') || (fields['email'] === ' ') || (fields['phone'] === ' ') || (fields['adressL1'] === ' ') || (fields['adressL2'] === ' ') || (fields['province'] === ' ') || (fields['city'] === ' ') || (fields['postalCode'] === ' ')) {
+    //         validForm = false;
+    //         errors['empty'] = 'Please leave no obligatory fields empty';
+    //     }
+
+    //     if ((typeof fields['name'] !== 'undefined') || (typeof fields['surname'] !== 'undefined') || (typeof fields['province'] !== 'undefined') || (typeof fields['city'] !== 'undefined')) {
+    //         if ( (!fields['name'].match(/^[a-zA-Z]+$/)) || (!fields['surname'].match(/^[a-zA-Z]+$/)) || (!fields['province'].match(/^[a-zA-Z]+$/)) || (!fields['city'].match(/^[a-zA-Z]+$/))) {
+    //             validForm = false;
+    //             errors['onlyLetters'] = 'Please input only letters to the name, surname, province and city fields';
+    //         }
+    //     }
+
+    //     if (fields['email']) {}
+
+    //     console.log(errors)
+    // }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        console.log(objOrder)
+        // handleValidation(objOrder)
+        createOrder(objOrder)
+        setAlert(true)
     }
 
     const getInputValue = (e) => {
         e.preventDefault()
-
-        objOrder = {...objOrder, [e.target.name]: e.target.value}
+        objOrder.buyer = {...objOrder.buyer, [e.target.name]: e.target.value}
     }
 
     return (
-        <div>
+        <div className='dFlexCol centered'>
+            {alert ? 
+                <Alert
+                title={'Pedido realizado con éxito!'} 
+                description={spinner() ? <Spinner/> : 'El id de su orden es: ' + showOrderId()}
+                extra={'Gracias por su compra su pedido está siendo preparado'}
+                funcAlert={setAlert}
+                />
+            : null}
+            <p className='fs4 centered altFont fwBold'>Datos de compra</p>
             <form onSubmit={handleSubmit} className="checkoutFormContainer">
                 <div className="container">
                     <div className="Empresa">
@@ -68,7 +110,8 @@ const CheckoutForm = () => {
                         <input onChange={getInputValue} name="postalCode" className="checkoutInput"></input>
                     </div>
 
-                    <button className='btn btnSecondary mt5 ms5' onClick={() => createOrder(objOrder)} type="submit" value="Submit">Realizar pedido 🍷</button>
+                    {/* <button className='purchaseBtn btn btnSecondary' onClick={() => createOrder(objOrder)} type="submit" value="Submit">Realizar pedido 🍷</button> */}
+                    <button className='purchaseBtn btn btnSecondary' type="submit" value="Submit">Realizar pedido 🍷</button>
                 </div>
             </form> 
         </div>

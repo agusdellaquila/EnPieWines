@@ -29,7 +29,7 @@ const Navbar = () => {
 
             <ul className="navItems">
                 <li>
-                    <NavLink to="/">Inicio</NavLink>
+                    <NavLink key={'navHome'} to="/">Inicio</NavLink>
                 </li>
                 { categories.map(cat => 
                 <li>

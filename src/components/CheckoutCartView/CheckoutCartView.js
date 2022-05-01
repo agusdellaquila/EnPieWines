@@ -1,18 +1,22 @@
+import '../CheckoutCartView/CheckoutCartView.css'
 import { useContext } from 'react'
 import CartContext from '../CartContext/CartContext'
-import CartItem from '../CartItem/CartItem'
 
 const CheckoutCartView = () => {
     const { cart } = useContext(CartContext)
 
     return (
-        <div>
-            <div className='mt5'>
-                {cart.map( (item) => {
-                    return <CartItem remove={null} key={item.id} id={item.id} title={item.title} price={item.price} totalPrice={item.totalPrice} count={item.quantity} image={item.image}/>
-                })}
-            </div>
-
+        <div className='dFlexCol centered'>
+            <p className='fs4 centered altFont fwBold'>Resumen del carrito</p>
+            {cart.map( (item) => {
+                return (
+                <div className='cartViewItem centered'>
+                    <img src={item.image} alt={item.title} width="60px" height="60px"></img>
+                    <p className="ms5">{item.title}</p>
+                    <p className='ms5 altFont fwBold'>x{item.quantity}</p>
+                    <p className="ms5 altFont">${item.totalPrice}</p>
+                </div>)
+            })}
         </div>
     )
 }
