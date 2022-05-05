@@ -1,0 +1,20 @@
+.banners a {
+    width: 95%;
+    margin: 5px auto;
+}
+.banners img {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    margin: 5px auto;
+}
+@media (min-width: 1024px){
+    .banners {
+        display: none;
+    }
+}
+@media (min-width: 576px) and (max-width: 1023px) {
+    .banners img {
+        width: 85%;
+    }
+}

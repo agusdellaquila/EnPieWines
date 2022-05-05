@@ -3,10 +3,25 @@
     display: grid; 
     grid-template-columns: 0.75fr 2.25fr 0.5fr 1fr 1fr; 
     grid-template-rows: 0.1fr; 
-    gap: 0px 0px; 
     place-items: center;
+    padding: 0.25rem;
 }
-
+.cartViewItem {
+    width: 325px;
+}
+.cartViewItem p {
+    margin: 0px 10px;
+}
 .trashIcon {
     cursor: pointer;
+}
+@media (min-width: 1024px){
+    .cartItem {
+        padding: 1rem;
+    }
+}
+@media (min-width: 576px) and (max-width: 1023px) {
+    .cartItem {
+        padding: 0.75rem;
+    }
 }

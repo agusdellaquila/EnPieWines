@@ -2,16 +2,13 @@
     font-family: 'hudson';
     src: local('hudson'), url(./font/HamburgHand-Regular.otf);
 }
-
 body {
     font-family: 'hudson';
 }
-
 /*-------------------- atoms */
 .mobileHidden {
     display: none !important;
 }
-
 .desktopHidden {
     display: inherit !important;
 }
@@ -152,6 +149,9 @@ body {
     background-color: #46000c;
 }
 /* _______________________margins */
+.navbarGap {
+    margin-top: 135px;
+}
 /* ______________margin start*/
 .mt0 {
     margin-top: 0;
@@ -338,9 +338,8 @@ body {
     height: 2px;
     background-color: #820016;
 }
-
-.contentContainer {
-    width: 70%;
-    /* text-align: center; */
-    margin: 0 auto;
+.altContainer {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
 }

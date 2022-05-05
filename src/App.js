@@ -13,6 +13,7 @@ import Carrito from './components/Carrito/Carrito'
 import TerminosYCondiciones from './components/TerminosYCondiciones/TerminosYCondiciones'
 import PoliticaDePrivacidad from './components/PoliticaDePrivacidad/PoliticaDePrivacidad'
 import Checkout from './components/Checkout/Checkout'
+import Contacto from './components/Contacto/Contacto'
 
 function App() {
   return (
@@ -25,13 +26,14 @@ function App() {
                   <Routes>
                     <Route path='/' element={<Home/>}/>	
                     <Route path='/item/:category' element={<ItemListContainer/>}/>
-                      <Route path='/detail/:id' element={<ItemDetailContainer/>}/>
+                    <Route path='/detail/:id' element={<ItemDetailContainer/>}/>
                     <Route path='*' element={<NotFound/>}/>
-                      <Route path='/carrito' element={<Carrito/>}/>
+                    <Route path='/carrito' element={<Carrito/>}/>
                     <Route path='/SobreNosotros' element={<SobreNosotros/>}/>
                     <Route path='/TerminosYCondiciones' element={<TerminosYCondiciones/>}/>
                     <Route path='/PoliticaDePrivacidad' element={<PoliticaDePrivacidad/>}/>
-                      <Route path='/checkout' element={<Checkout/>}/>
+                    <Route path='/checkout' element={<Checkout/>}/>
+                    <Route path='/contacto' element={<Contacto/>}/>
                   </Routes>
               </header>
                 <footer>

@@ -1,6 +1,4 @@
-import '../ItemDetailContainer/ItemDetailContainer.css'
 import ItemDetail from '../ItemDetail/ItemDetail';
-import { getProductsById } from '../asyncMock';
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom'
 import { firestoreDb } from '../../services/firebase';
@@ -20,7 +18,7 @@ const ItemDetailContainer = () => {
     }, [id])
 
     return (
-        <div className="detailContainer">
+        <div className="navbarGap detailContainer">
             {productsById ? <ItemDetail {...productsById}/> : <NotFound/>}
         </div>
     )

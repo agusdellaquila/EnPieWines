@@ -1,7 +1,12 @@
 .checkoutContainer {
     display: grid; 
     grid-auto-columns: 1fr; 
-    grid-template-columns: 0.5fr 1fr 1fr 0.5fr; 
+    grid-template-columns: 1fr; 
     gap: 0px 0px;  
     margin-top: 30px;
+}
+@media (min-width: 1024px){
+    .checkoutContainer {
+        grid-template-columns: 0.5fr 1fr 1fr 0.5fr; 
+    }
 }

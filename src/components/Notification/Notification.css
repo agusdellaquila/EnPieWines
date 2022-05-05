@@ -1,22 +1,19 @@
 .notificationContainer {
-    position: absolute;
+    position: fixed;
     top: 100px;
     right: 10px;
     width: max-content;
-    height: max-content;
+    height: 40px;
     padding: 0rem 1rem;
-    border-radius: 10px;
     color: #ffffff;
+    white-space: initial;
 }
-
 .success {
-    background-color: #aacc00;
+    background: linear-gradient(to right, #00b09b, #96c93d);
 }
-
 .error {
-    background-color: #d62828;
+    background-color: #dc3545;
 }
-
 .warning {
     background-color: #faa307;
 }

@@ -1,12 +1,29 @@
+.cartContainer{
+    padding: 20px;
+}
 .carritoInput {
     width: 200px;
     height: 30px;
     border: 2px solid #820016;
 }
-
 .totalPrice {
-    background-color: #820016;
-    color: white;
+    color: #0b8e48;
     font-weight: bold;
-    padding: 0.3rem;
+}
+@media (min-width: 1024px){
+    .carritoInput {
+        width: 200px;
+        height: 30px;
+        border: 2px solid #820016;
+    }
+    .cartViewContainer {
+        width: 40%;
+    }
+    .totalPrice {
+        color: #0b8e48;
+        font-weight: bold;
+    }
+}
+@media (min-width: 576px) and (max-width: 1023px) {
+
 }

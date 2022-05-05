@@ -1,57 +1,99 @@
 .navContainer{
+    position: fixed;
+    top: 0;
     display: flex;
     align-items: center;
-    background-color: transparent;
     height: 80px;
     justify-content: space-around;
     padding: 0.25rem;
     width: 100%;
+    z-index: 2;
+    background-color: #ffffff;
+    -webkit-box-shadow: 1px 6px 15px -2px rgba(0,0,0,0.2); 
+    box-shadow: 1px 6px 15px -2px rgba(0,0,0,0.3);
 }
 .navLogo {
     height: 30px;
     width: 95px;
 }
-.navItems {
-    display: none;
+ul {
+    padding: 0;
 }
 .navItems li {
     list-style-type: none;
-    margin: 0 2rem;
+    margin: 1rem 2rem;
 }
 .navItems li a {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #000000;
+    color: #ffffff;
     font-weight: 700;
     text-decoration: none;
 }
-.navItems li a:hover{
-    text-decoration: underline;
-    text-decoration-color: #820016;
+.showMobileMenu ul {
+    gap: 20px;
 }
-.loginIcon {
-    width: 25px;
+.burgerMenu {
+    width: 32px;
 }
-
+.closeMenu {
+    width: 32px;
+}
+.showMobileMenu {
+    background: rgba( 130, 0, 22, 0.95 );
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    backdrop-filter: blur( 3.5px );
+    -webkit-backdrop-filter: blur( 3.5px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    width: 100%;
+    height: max-content;
+    position: fixed;
+    top: 10%;
+    z-index: 2;
+}
+.mobileHidden {
+    display: none;
+}
 @media (min-width: 1024px){
     .navContainer{
         display: flex !important;
         align-items: center;
-        background-color: transparent;
         height: 80px;
         justify-content: space-evenly;
         padding: 0.25rem;
         width: 100%;
     }
-
     .navItems {
         display: flex !important;
         padding: 0;
     }
-
+    .navItems li a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #000000;
+        font-weight: 700;
+        text-decoration: none;
+    }
+    .navItems li a:hover{
+        text-decoration: underline;
+        text-decoration-color: #820016;
+    }
     .navLogo {
         height: 55px !important;
         width: 170px !important;
+    }
+    .desktopHidden {
+        display: none !important;
+    }
+}
+@media (min-width: 576px) and (max-width: 1023px) {
+    .navLogo {
+        height: 50px !important;
+        width: 160px !important;
+    }
+    .burgerMenu {
+        width: 38px !important;
     }
 }

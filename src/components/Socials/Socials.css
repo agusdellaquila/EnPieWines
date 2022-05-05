@@ -1,3 +1,6 @@
 .socialsList {
     padding: 0;
 }
+.socialsList img {
+    width: 38px;
+}

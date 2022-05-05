@@ -1,15 +1,49 @@
 .ItemCard {
-    width: 350px;
-    height: max-content;
+    width: 275px;
+    height: 450px;
     padding: 2rem 0;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 15px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7), 0 6px 20px 0 rgba(0, 0, 0, 0.01);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
 .ItemImg {
-    width: 300px;
-    height: 300px;
+    width: 175px;
+    height: 175px;
+}
+.itemTitle {
+    text-align: center;
+    padding: 0 1rem;
+}
+.offer {
+    text-decoration: line-through;
+    color: #6b6b6b;
+}
+.offerSale {
+    position: absolute;
+    margin-top: -25px;
+    width: max-content;
+    height: max-content;
+    background-color: #820016;
+    color: #ffffff;
+    padding: 2px;
+}
+@media (min-width: 1024px){
+    .ItemCard {
+        width: 250px;
+    }
+    .ItemImg {
+        width: 225px;
+        height: 225px;
+    }
+}
+@media (min-width: 576px) and (max-width: 1023px) {
+    .ItemCard {
+        width: 240px;
+    }
+    .ItemImg {
+        width: 200px;
+        height: 200px;
+    }
 }

@@ -1,6 +1,6 @@
 const PoliticaDePrivacidad = () => {
     return (
-        <div className="contentContainer">
+        <div className="navbarGap altContainer centered dFlexCol">
             <h3>POLÍTICA DE PRIVACIDAD</h3>
             <p className="altFont">Esta empresa está comprometida con la seguridad de los datos de sus usuarios. Cuando le pedimos llenar los campos de información personal con la cual usted pueda ser identificado, lo hacemos asegurando que sólo se empleará de acuerdo con los términos de este documento. Sin embargo esta Política de Privacidad puede cambiar con el tiempo o ser actualizada por lo que le recomendamos y enfatizamos revisar continuamente esta página para asegurarse que está de acuerdo con dichos cambios.</p>
         

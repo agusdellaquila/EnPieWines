@@ -5,15 +5,15 @@ import CheckoutCartView from '../CheckoutCartView/CheckoutCartView'
 
 const Checkout = () => {
     return (
-        <div>
+        <div className='navbarGap'>
             <p className='fs3 centered'>Checkout</p>
             <div className='checkoutContainer'>
                 <div></div>
                 <div>
-                    <CheckoutForm/>
+                    <CheckoutCartView/>
                 </div>
                 <div>
-                    <CheckoutCartView/>
+                    <CheckoutForm/>
                 </div>
                 <div></div>
             </div>

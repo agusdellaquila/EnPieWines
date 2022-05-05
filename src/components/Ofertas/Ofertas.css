@@ -1,0 +1,16 @@
+.offerContainer {
+    margin-top: 0px;
+}
+.offerSubContainer {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem 2rem;
+}
+@media (min-width: 1024px){
+    .offerContainer {
+        margin-top: 50px;
+    }
+}

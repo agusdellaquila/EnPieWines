@@ -5,8 +5,8 @@ const Alert = ({title, description, extra, funcAlert }) => {
         <div>
             <div className="alert dFlexCol centered">
                 <p className="fs5 mt3">{title}</p>
-                <p className="fs5 altFont alertDescription centered">{description}</p>
-                <p className='fs7 altFont'>{extra}</p>
+                <p className="fs5 altFont alertText">{description}</p>
+                <p className='fs7 altFont alertText'>{extra}</p>
                 <button className='btn btnSecondary alertClose' onClick={() => {funcAlert(false)}}>X</button>
             </div>
         </div>

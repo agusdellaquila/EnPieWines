@@ -1,4 +1,4 @@
-import '../Home/Home.css'
+import '../Carrousel/Carrousel.css'
 import '@splidejs/react-splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import { Link } from 'react-router-dom'

@@ -4,7 +4,7 @@ import Socials from '../Socials/Socials'
 
 const SobreNosotros = () => {
     return (
-        <div className='centered dFlexCol'>
+        <div className='navbarGap altContainer centered dFlexCol'>
             <h2 className="centered mt5">Sobre Nosotros</h2>
 
             <img src={logo} className="navLogo mt3 mb4" alt="enPie logo"/>

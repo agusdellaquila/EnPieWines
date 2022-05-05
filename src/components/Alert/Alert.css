@@ -1,26 +1,40 @@
 .alert {
-    width: 650px;
+    width: 350px;
     height: 250px;
     background-color: #ffffff;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 1);
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 2;
 }
-
-.alertDescription {
-    width: 500px;
+.alertText {
     text-align: center;
 }
-
 .alertClose {
     position: absolute;
-    top: 10%;
-    left: 96%;
+    top: 11%;
+    left: 93%;
     transform: translate(-50%, -50%);
-    border-radius: 10px;
-    margin-right: 10px;
+}
+@media (min-width: 1024px){
+    .alert {
+        width: 650px;
+        height: 250px;
+    }
+    .alertClose {
+        top: 11%;
+        left: 96%;
+    }
+}
+@media (min-width: 576px) and (max-width: 1023px) {
+    .alert {
+        width: 500px;
+        height: 250px;
+    }
+    .alertClose {
+        top: 11%;
+        left: 95%;
+    }
 }

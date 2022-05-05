@@ -75,11 +75,11 @@ const CheckoutForm = () => {
                     </div>
                     <div className="Nombre">
                         <label className="checkoutFont">Nombre <span className='checkoutObligatory'>*</span></label>
-                        <input onChange={getInputValue} name="name" className="checkoutInput"></input>
+                        <input onChange={getInputValue} name="name" type="text" className="checkoutInput"></input>
                     </div>
                     <div className="Apellido">
                         <label className="checkoutFont">Apellido <span className='checkoutObligatory'>*</span></label>
-                        <input onChange={getInputValue} name="surname" className="checkoutInput"></input>
+                        <input onChange={getInputValue} name="surname" type="text" className="checkoutInput"></input>
                     </div>
                     <div className="Pais">
                         <p className='checkoutFont'>País / Región <span className='checkoutObligatory'>*</span> <br/> Argentina</p>
@@ -91,23 +91,23 @@ const CheckoutForm = () => {
                     </div>
                     <div className="Provincia">
                         <label className="checkoutFont">Provincia <span className='checkoutObligatory'>*</span></label>
-                        <input onChange={getInputValue} name="province" className="checkoutInput"></input>
+                        <input onChange={getInputValue} name="province" type="text" className="checkoutInput"></input>
                     </div>
                     <div className="Localidad">
                         <label className="checkoutFont">Localidad / Ciudad <span className='checkoutObligatory'>*</span></label>
-                        <input onChange={getInputValue} name="city" className="checkoutInput"></input>
+                        <input onChange={getInputValue} name="city" type="text" className="checkoutInput"></input>
                     </div>
                     <div className="Correo">
                         <label className="checkoutFont">Correo electrónico<span className='checkoutObligatory'>*</span></label>
-                        <input onChange={getInputValue} name="email" className="checkoutInput"></input>
+                        <input onChange={getInputValue} name="email" type="email" maxLength="50" className="checkoutInput"></input>
                     </div>
                     <div className="Telefono">
                         <label className="checkoutFont">Teléfono<span className='checkoutObligatory'>*</span></label>
-                        <input onChange={getInputValue} name="phone" className="checkoutInput"></input>
+                        <input onChange={getInputValue} name="phone" type="number" className="checkoutInput"></input>
                     </div>
                     <div className="CodigoPostal">
                         <label className="checkoutFont">Código postal <span className='checkoutObligatory'>*</span></label>
-                        <input onChange={getInputValue} name="postalCode" className="checkoutInput"></input>
+                        <input onChange={getInputValue} name="postalCode" type="number" className="checkoutInput"></input>
                     </div>
 
                     {/* <button className='purchaseBtn btn btnSecondary' onClick={() => createOrder(objOrder)} type="submit" value="Submit">Realizar pedido 🍷</button> */}

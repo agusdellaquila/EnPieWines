@@ -17,27 +17,31 @@ const ItemDetail = ({id, image, title, description, price, stock}) => {
 
         if (isInCart(id)) {
             agregarCantidad(id, count)
+            setNotification(`Agregado correctamente`, 'success')
         } else {         
             const productObj = {
                 id, title, price, image
             }
 
             addItem({...productObj, quantity: count, totalPrice: (count*price)})
-            setNotification(`Se agregaron ${count} ${title} al carrito`, 'success')
+            setNotification(`Agregado correctamente`, 'success')
         }
-
     }
 
     return (
-        <div className="detail p5">
-            <img src={image} alt='productImg'/>
+        <div className="navbarGap detail">
+            <div></div>
+            <div>
+                <img src={image} alt='productImg'/>
+            </div>
             <div className='detailInfo'>
                 <h3>{title}</h3>
                 <p className='detailInfoDescription altFont'>{description}</p>
+                <p className='altFont fwBold'>Stock: {stock}</p>
                 <p className='detailInfoPrice'>${price}</p>
                 {quantity > 0 ? <Link to='/carrito' className='noUnderline accentFontColor btnPrimary'><p className='fs5 p2'>Ver el carrito</p></Link> :  <ItemCount onConfirm={handleAdd} stock={stock}/>}
             </div>
-            <div><p>Stock: {stock}</p></div>
+            <div></div>
         </div>
     )
 }

@@ -24,10 +24,10 @@ const ItemListContainer = () => {
     }, [category])
 
     if (products.length == 0) {
-        return <p className='fs4 centered'>No hay productos</p>
+        return <p className='navbarGap fs4 centered'>No hay productos</p>
     }
     return (
-        <div>
+        <div className='navbarGap'>
             {products.length > 0 ? <ItemList products={products} category={category}/> : <NoContent/>}
         </div>
     )

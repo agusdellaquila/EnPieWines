@@ -12,9 +12,9 @@ const CheckoutCartView = () => {
                 return (
                 <div className='cartViewItem centered'>
                     <img src={item.image} alt={item.title} width="60px" height="60px"></img>
-                    <p className="ms5">{item.title}</p>
-                    <p className='ms5 altFont fwBold'>x{item.quantity}</p>
-                    <p className="ms5 altFont">${item.totalPrice}</p>
+                    <p className="">{item.title}</p>
+                    <p className='altFont fwBold'>x{item.quantity}</p>
+                    <p className="altFont">${item.totalPrice}</p>
                 </div>)
             })}
         </div>

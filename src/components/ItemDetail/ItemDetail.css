@@ -1,11 +1,10 @@
 .detail {
     display: grid; 
-    grid-template-columns: 1fr 1fr; 
+    grid-template-columns: 1fr; 
     grid-template-rows: 1fr; 
     gap: 0px 0px; 
     place-items: center;
 }
-
 .detailInfo {
     display: grid; 
     grid-template-columns: 1fr; 
@@ -13,20 +12,28 @@
     gap: 0px 0px;
     place-items: center;
 }
-
 .detailInfoDescription {
     text-align: center;
     padding: 0 3rem;
 }
-
 .detailInfoPrice {
     background-color: #820016;
     color: white;
     font-weight: bold;
     padding: 0.5rem;
 }
-
 .detail img{
-        width: 320px;
-        height: 300px;
+    width: 320px;
+    height: 300px;
+}
+@media (min-width: 1024px){
+    .detail {
+        grid-template-columns: 0.25fr 1fr 1fr 0.25fr; 
     }
+}
+@media (min-width: 576px) and (max-width: 1023px) {
+    .detail {
+        width: 80%;
+        margin: auto;
+    }
+}

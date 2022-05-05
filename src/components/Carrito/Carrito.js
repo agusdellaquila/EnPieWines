@@ -16,22 +16,22 @@ const Carrito = () => {
     }
 
     return (
-        <div className='contentContainer centered dFlexCol'>
+        <div className='navbarGap centered dFlexCol cartContainer'>
             <p className='fs3'>Carrito</p>
 
             {getQuantity() === 0 ? <p className='altFont fwBold'>No hay nada en el carro aún</p> :
-            <div> 
+            <div className='cartViewContainer'> 
                 <div className='mt5'>
                 {cart.map( (item) => {
                     return <CartItem remove={removeItem} key={item.id} id={item.id} title={item.title} price={item.price} totalPrice={item.totalPrice} count={item.quantity} image={item.image}/>
                 })}
                 </div>
 
-                <p>Total del carrito: <span className='totalPrice'>$ {getCartTotal()}</span></p>
+                <p className='mt3'>Total: <span className='totalPrice'>$ {getCartTotal()}</span></p>
     
                 <div className='mt5'>
-                <input className='carritoInput me3' placeholder='Código de cupón'></input>
-                <button className='btn btnPrimary'> Aplicar cupón </button>
+                    <input className='carritoInput me3' placeholder='Código de cupón'></input>
+                    <button className='btn btnPrimary'> Aplicar cupón </button>
                 </div>
     
                 <button className='btn btnSecondary mt5' onClick={clearCart}>Vaciar Carrito</button>

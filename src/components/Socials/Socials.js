@@ -3,7 +3,7 @@ import '../Socials/Socials.css'
 const Socials = () => {
     return (
         <div>
-            <ul className="dFlex socialsList">
+            <ul className="centered socialsList">
                 <li className='noBullet'>
                     <a href = "https://www.facebook.com/EnPieWines/" target="_blank" rel="noreferrer"><img src="https://img.icons8.com/glyph-neue/64/ffffff/facebook.png" alt='facebook icon'/></a>
                 </li>

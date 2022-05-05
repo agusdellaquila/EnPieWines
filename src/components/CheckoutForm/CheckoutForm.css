@@ -1,7 +1,6 @@
 .checkoutFormContainer {
     width: 60%;
 }
-
 .checkoutInput {
     background-color: #e2e2e2;
     border: none;
@@ -9,20 +8,18 @@
     width: 350px;
     height: 25px;
 }
-
 .checkoutFont {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: bold;
 }
-
 .checkoutObligatory {
     color: #820016;
 }
-
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(11, 0.1fr);
+    place-items: center;
     gap: 0px 20px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -38,54 +35,51 @@
         "CodigoPostal CodigoPostal"
         "purchaseBtn purchaseBtn";
 }
-
 .container div {
     margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
 }
-
 .Empresa {
     grid-area: Empresa;
 }
-
 .Nombre {
     grid-area: Nombre;
 }
-
 .Apellido {
     grid-area: Apellido;
 }
-
 .Pais {
     grid-area: Pais;
 }
-
 .Direccion {
     grid-area: Direccion;
 }
-
 .Provincia {
     grid-area: Provincia;
 }
-
 .Localidad {
     grid-area: Localidad;
 }
-
 .Correo {
     grid-area: Correo;
 }
-
 .Telefono {
     grid-area: Telefono;
 }
-
 .CodigoPostal {
     grid-area: CodigoPostal;
 }
-
 .purchaseBtn {
     grid-area: purchaseBtn;
     margin-top: 1rem;
+}
+@media (min-width: 1024px){
+    .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(11, 0.1fr);
+        place-items: center;
+        gap: 0px 300px;
+    }
 }

@@ -1,9 +1,19 @@
 .cartViewItem {
     border: 1px solid #b6b6b6;
-    display: grid; 
-    grid-template-columns: 0.75fr 2.25fr 0.5fr 1fr; 
-    grid-template-rows: 0.1fr; 
-    gap: 0px 0px; 
-    place-items: center;
-    padding: 1rem 2rem 1rem 1rem;
+    display: flex; 
+    padding: 10px;
+}
+.cartViewItem p {
+    margin: 0px 15px;
+}
+@media (min-width: 1024px){
+    .cartViewItem {
+        border: 1px solid #b6b6b6;
+        display: grid; 
+        grid-template-columns: 0.75fr 2.25fr 0.5fr 1fr; 
+        grid-template-rows: 0.1fr; 
+        gap: 0px 0px; 
+        place-items: center;
+        padding:  0.5rem 1rem 0.5rem 0.5rem;
+    }
 }

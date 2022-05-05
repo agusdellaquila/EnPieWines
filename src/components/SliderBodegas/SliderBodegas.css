@@ -1,4 +1,31 @@
 .imgSliderBodega {
     width: 180px;
     height: 150px;
+    margin-right: 20px;
+}
+.scroll {
+    position: relative;
+    height: 15%;
+    min-height: 150px;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: 40px;
+    padding: 0;
+}
+.m-scroll {
+    overflow: hidden;
+    height: 100%;
+    white-space: nowrap;
+    animation: hscroll 15s infinite linear;
+    margin: 0;
+    display: inline-block;
+}
+@keyframes hscroll {
+    from {
+        transform: translateX(0%);
+    }
+
+    to {
+        transform: translateX(-50%);
+    }
 }

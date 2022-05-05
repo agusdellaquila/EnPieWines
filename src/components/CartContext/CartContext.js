@@ -88,7 +88,6 @@ export const CartContextProvider = ( { children } ) => {
             }).then(({ id }) => {
                 //.id es el de la orden
                 objOrder.buyer = {...objOrder.buyer, purchaseId: id}
-                console.log(objOrder)
                 setPurchaseId(id)
                 setLoading(false)
                 batch.commit()
