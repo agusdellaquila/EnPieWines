@@ -2,7 +2,7 @@
 ![enPieLogo](https://i.imgur.com/ir2AYXf.png)
 Este es un proyecto e-commerce para un gran distribuidor de alcohol de la ciudad de Buenos Aires, que busca ser una marca minimalista pero funcional.
 Link al la app hosteada: https://en-pie-wines.vercel.app/
-## Tecnologias usadas
+## Tecnologías usadas
 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="Javascript" /></a>
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
 <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
@@ -17,7 +17,7 @@ Una vez instalado git,  creamos la carpeta donde queremos que se clone el proyec
 
     git clone https://github.com/agusdellaquila/enPieWines.git
 
-### #3 Inicializar NPM
+### #3 Inicializar NPM <a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" width="36" height="36" alt="NodeJS" /></a>
 Nuevamente en la terminal escribimos los siguientes comandos (posicionándonos en la carpeta que clonamos, donde se encuentra el package.json):
 **Para la inicialización del proyecto**
 
@@ -34,7 +34,7 @@ Nuevamente en la terminal escribimos los siguientes comandos (posicionándonos e
 El comando npm start nos abrirá automáticamente en nuestro navegador la url [http://localhost:3000/](http://localhost:3000/) que sera la que nos permitirá visualizar la aplicación.
 ## Tecnologías
 Para llevar a cabo este proyecto se hizo uso de las siguientes:
-### React
+### React <a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
 Se utiliza esta librería para la creación total de la Single Page Application (SPA) ya que destaca en el manejo del DOM y sus componentes visuales.
 Dentro de react utilizamos : 
 + { useState } : para guardar y setear valores, como si fueran variables 
@@ -57,7 +57,7 @@ Dentro de react utilizamos :
 +  getDoc
 
 Estas funciones se utilizan para obtener y enviar y datos desde y hacia la base de datos
-## Estructura de las páginas
+## Estructura de las páginas <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
 + **Inicio:** Cuenta con un alert para promocionar un descuento, un carrousel con banners, una sección donde se muestran productos en oferta, un slider de las bodegas participes, y el footer
 + **Cerveza, Champagne, Gin, Vino y Whisky:** Las páginas donde se listan los productos correspondientes, donde cada item tiene un detalle dentro para poder saber mas y agregarlos al carro.
 +  **Carrito:** Donde se encuentra detallado el carrito con todos los productos agregados, un botón para eliminar item y otro para vaciar el carro entero. Tambien cuenta con un input para un código de descuento. Por ultimo esta el botón que nos lleva al checkout.
