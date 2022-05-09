@@ -2,6 +2,13 @@
 ![enPieLogo](https://i.imgur.com/ir2AYXf.png)
 Este es un proyecto e-commerce para un gran distribuidor de alcohol de la ciudad de Buenos Aires, que busca ser una marca minimalista pero funcional.
 Link al la app hosteada: https://en-pie-wines.vercel.app/
+##Tecnologias usadas
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/javascript-colored.svg" width="36" height="36" alt="Javascript" /></a>
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/react-colored.svg" width="36" height="36" alt="React" /></a>
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
+<a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a>
+<a href="https://nodejs.org/en/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/nodejs-colored.svg" width="36" height="36" alt="NodeJS" /></a>
+a href="https://firebase.google.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg" width="36" height="36" alt="Firebase" /></a>
 ## Como instalar
 ### #1 Instalaciones
 Primero debemos tener instalado [Node](https://nodejs.org/es/) y [Git](https://git-scm.com/downloads) en nuestro equipo. 
@@ -38,7 +45,7 @@ Dentro de react utilizamos :
 + { routes } : para envolver las rutas que voy a utilizar
 + { route } : para indicar el path de cada elemento contenido en Route 
 + { link } : para indicar el hipervínculo. Funciona utilizando la etiqueta `<a>` de HTML
- ### Firestore
+ ### Firestore <a href="https://firebase.google.com/" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/firebase-colored.svg" width="36" height="36" alt="Firebase" /></a>
  Esta es la base de datos no estructural proporcionada por firebase, google.
  De esta hemos usado: 
 +   collection
@@ -67,7 +74,7 @@ Todo el código se encuentra dentro de la carpeta src donde nos encontraremos ar
 Tambien encontraremos el archivo Atoms.css el cual hablaremos en profundidad en la sección de  **Estilos** 
 
 Luego, dentro de src hallaremos la carpeta font, donde se encuentra instalada la tipografía principal de la marca. La carpeta services, donde esta el index.js de los servicios donde esta la conexión con la API de firestore. Y por ultimo la carpeta components donde están todos los componentes de react que conforman esta aplicación. La mayoría cuenta con su propia hoja de estilos individual a cada componente.
-## Estilos
+## Estilos <a href="https://www.w3.org/TR/CSS/#css" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/css3-colored.svg" width="36" height="36" alt="CSS3" /></a>
 El archivo principal de estilos es el llamado Atoms.css, una librería creada por mi, basada en el atomic design. Esto consiste en tener clases muy pequeñas las cuales hagan cambios muy específicos, con nombres obvios y fáciles de recordar. De esta forma cada vez que creemos una nueva etiqueta, podremos darle muchos estilos de manera rápida y sencilla. Pero esto es simplemente, como el nombre indica, una hoja de estilos con átomos. Claramente esto no alcanza para poder estilar la pagina completa, por eso es que la mayoría de los componentes cuentan con su hoja de estilos personales. 
 Los @mediaQueries pueden ser encontrados en los estilos de cada componente
 
