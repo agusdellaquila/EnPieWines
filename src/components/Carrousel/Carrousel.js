@@ -16,13 +16,13 @@ const Carrousel = () => {
             }}
             >
                 <SplideSlide className='centered'>
-                    <Link to="/item/champagne"><img src='../images/banners/bannerChampagne.png'/></Link>
+                    <Link to="/item/champagne"><img src='../images/banners/bannerChampagne.png' alt='banner champagne'/></Link>
                 </SplideSlide>
                 <SplideSlide className='centered'>
-                    <Link to="/item/whisky"><img src='../images/banners/bannerOfertas.png'/></Link>
+                    <Link to="/item/whisky"><img src='../images/banners/bannerOfertas.png' alt='banner ofertas'/></Link>
                 </SplideSlide>
                 <SplideSlide className='centered'>
-                    <Link to="/item/vino"><img src='../images/banners/bannerVinos.png'/></Link>
+                    <Link to="/item/vino"><img src='../images/banners/bannerVinos.png' alt='banner vino'/></Link>
                 </SplideSlide>
             </Splide>
         </div>

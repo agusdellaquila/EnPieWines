@@ -4,7 +4,7 @@ import CartIcon from '../CartWidget/CartIcon.svg'
 const CartWidget = ({CartAmount}) => {
     return(
         <div className='dFlex'>
-            <img src={CartIcon} className="cartIcon"/>
+            <img src={CartIcon} className="cartIcon" alt='cart icon'/>
             <p className='cartAmount ms2 fwBold centered'>{CartAmount()}</p>
         </div>
     )

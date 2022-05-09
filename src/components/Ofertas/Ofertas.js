@@ -9,7 +9,7 @@ const Ofertas = () => {
 
     const collectionRef = collection(firestoreDb, 'products')
 
-    useEffect( () => {
+    const getOfferProds = () => {
         getDocs(query(collectionRef, where('offer', '==', true)))
         .then(response => {
             const OfferProds = response.docs.map(doc => { 
@@ -17,9 +17,13 @@ const Ofertas = () => {
             })
             setOfferProducts(OfferProds)
         })
-    }, [])
+    }
 
-    if (offerProducts.length == 0) {
+    useEffect( () => {
+        getOfferProds()
+    }, []) // eslint-disable-line react-hooks/exhaustive-deps
+
+    if (offerProducts.length === 0) {
         return <p className='navbarGap fs4 centered'>No hay productos en oferta de momento</p>
     }
 
