@@ -1,0 +1,14 @@
+.detailContainer {
+    background-color: rgba(255, 255, 255, 0.724);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
+    width: 80%;
+    height: max-content;
+    padding: 2rem 1rem 3rem 1rem;
+    margin: 150px auto 60px auto;
+}
+@media (min-width: 1024px){
+    .detailContainer {
+        height: 500px;
+        margin: 150px auto 100px auto;
+    }
+}

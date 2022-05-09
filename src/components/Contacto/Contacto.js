@@ -8,7 +8,6 @@ const Contacto = () => {
                 <section className='contactInfoText altFont'>
                     <p className='fs6 fwBold underline'>Estamos en:</p>
                     <p>Belaustegui 3395</p>
-
                     <p className='fs6 fwBold underline'>Horario de Atención:</p>
                     <p>Lunes a Viernes: 11 a 20 hs</p>
                     <p>Sábados: 11 a 14 y 17 a 20 hs</p>

@@ -1,8 +1,8 @@
 import { createContext, useState } from 'react'
 import { getDocs, query, writeBatch, collection, where, documentId, addDoc } from 'firebase/firestore'
 import { firestoreDb } from '../../services/firebase';
+import { useNotification } from '../NotificationContext/NotificationContext'
 
-//createContext
 const CartContext = createContext()
 
 export const CartContextProvider = ( { children } ) => {
@@ -11,6 +11,8 @@ export const CartContextProvider = ( { children } ) => {
     const [purchaseId, setPurchaseId] = useState('')
 
     const [loading, setLoading] = useState(true)
+
+    const { setNotification } = useNotification()
 
     const addItem = (productToAdd) => {
             setCart([...cart, productToAdd])
@@ -63,7 +65,7 @@ export const CartContextProvider = ( { children } ) => {
     }
 
     const createOrder = (objOrder) => {
-        const ids = cart.map(prod => prod.id) //array de ids de productos que esten cargados en el carro
+        const ids = cart.map(prod => prod.id)
         const batch = writeBatch(firestoreDb)
         const collectionRef = collection(firestoreDb, 'products')
         const outOfStock = []
@@ -86,13 +88,12 @@ export const CartContextProvider = ( { children } ) => {
                     return Promise.reject({name: 'outOfStockError', products: outOfStock})
                 }
             }).then(({ id }) => {
-                //.id es el de la orden
                 objOrder.buyer = {...objOrder.buyer, purchaseId: id}
                 setPurchaseId(id)
                 setLoading(false)
                 batch.commit()
-            }).catch(error => {
-                console.log('ERROR')
+            }).catch( () => {
+                setNotification(`Error, no se pudo agregar el item`, 'error')
             })
     }
 

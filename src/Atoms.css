@@ -3,7 +3,10 @@
     src: local('hudson'), url(./font/HamburgHand-Regular.otf);
 }
 body {
+    margin: 0;
     font-family: 'hudson';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 /*-------------------- atoms */
 .mobileHidden {

@@ -4,7 +4,6 @@ import { useState, useEffect, useContext } from 'react'
 import { firestoreDb } from '../../services/firebase'
 import { getDocs, collection, query } from 'firebase/firestore'
 import CartContext from '../CartContext/CartContext'
-import logo from '../../logo.png';
 import CartWidget from '../CartWidget/CartWidget'
 
 const Navbar = () => {
@@ -28,12 +27,12 @@ const Navbar = () => {
     const showCategories = (view) => {
         return (
             <ul className={`navItems ${view === 'desktopView' ? 'mobileHidden' : ''}`}>
-                <li>
-                    <NavLink key={'navHome'} to="/" onClick={() => setNavbarOpen(false)}>Inicio</NavLink>
+                <li key={'navHome'}>
+                    <NavLink to="/" onClick={() => setNavbarOpen(false)}>Inicio</NavLink>
                 </li>
                 { categories.map(cat => 
-                <li>
-                    <NavLink key={cat.id} to={`/item/${cat.id}`} onClick={() => setNavbarOpen(false)} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>{cat.description}</NavLink>
+                <li key={cat.id}>
+                    <NavLink to={`/item/${cat.id}`} onClick={() => setNavbarOpen(false)} className={({isActive}) => isActive ? 'ActiveOption' : 'Option'}>{cat.description}</NavLink>
                 </li>
                 )}
             </ul>
@@ -43,7 +42,7 @@ const Navbar = () => {
         <div>
             <nav className="navContainer">
                 <Link to="/">
-                    <img src={logo} className="navLogo" alt="enPie logo"/>
+                    <img src="../images/logo.png" className="navLogo" alt="enPie logo"/>
                 </Link>
 
                 {navbarOpen ? null : showCategories('desktopView')}

@@ -1,5 +1,4 @@
 import '../SobreNosotros/SobreNosotros.css'
-import logo from '../../logo.png';
 import Socials from '../Socials/Socials'
 
 const SobreNosotros = () => {
@@ -7,7 +6,7 @@ const SobreNosotros = () => {
         <div className='navbarGap altContainer centered dFlexCol'>
             <h2 className="centered mt5">Sobre Nosotros</h2>
 
-            <img src={logo} className="navLogo mt3 mb4" alt="enPie logo"/>
+            <img src="../images/logo.png" className="navLogo mt3 mb4" alt="enPie logo"/>
 
             <p className="snInfo altFont"> 
                 En Pie Wines es una tienda de vinos y bebidas alcohólicas con un amplio catalogo de productos.

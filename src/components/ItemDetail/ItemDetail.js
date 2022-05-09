@@ -29,7 +29,7 @@ const ItemDetail = ({id, image, title, description, price, stock}) => {
     }
 
     return (
-        <div className="navbarGap detail">
+        <div className="detail">
             <div></div>
             <div>
                 <img src={image} alt='productImg'/>

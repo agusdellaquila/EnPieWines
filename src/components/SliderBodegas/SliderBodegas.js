@@ -20,6 +20,9 @@ const SliderBodegas = () => {
                 <img className='imgSliderBodega' src={"https://www.rigloswines.com/wp-content/uploads/2017/06/Marca-Riglos-ret-copy-dark.png"} alt={"bodega riglos"}/>
                 <img className='imgSliderBodega' src={"https://www.closdelossiete.com/style/images/logo.png?v=0421"} alt={"bodega clos de los siete"}/>
                 <img className='imgSliderBodega' src={"https://www.espaciovino.com.ar/media/default/0001/14/thumb_13566_default_medium.jpeg"} alt={"bodega marchiori e barraud"}/>
+                <img className='imgSliderBodega' src={"https://delicatessenyvinos.com.ar/wp-content/uploads/2019/05/1-Rutini-Wines-01.jpg"} alt={"bodega ruttini"}/>
+                <img className='imgSliderBodega' src={"https://www.revistahigh.com.ar/files/image/0/376/5e6cd206cb61a.jpg"} alt={"bodega norton"}/>
+                <img className='imgSliderBodega' src={"https://delicatessenyvinos.com.ar/wp-content/uploads/2019/05/Bodega-Lopez-400x400px-01.jpg"} alt={"bodega lopez"}/>
             </div>
         </div>
     )

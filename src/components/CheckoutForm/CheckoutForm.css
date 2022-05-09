@@ -15,6 +15,18 @@
 .checkoutObligatory {
     color: #820016;
 }
+.input {
+    border: 2px solid #474747;
+}
+.input:invalid {
+    animation: shake 400ms;
+    border: 2px solid #820016;
+}
+@keyframes shake {
+    25% { transform: translateX(7px); }
+    50% { transform: translateX(-7px); }
+    75% { transform: translateX(7px); }
+}
 .container {
     display: grid;
     grid-template-columns: 1fr 1fr;

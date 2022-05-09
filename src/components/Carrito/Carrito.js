@@ -1,25 +1,25 @@
 import '../Carrito/Carrito.css'
-import { useContext, useState } from 'react'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import CartItem from '../CartItem/CartItem'
 import CartContext from '../CartContext/CartContext'
 
 
 const Carrito = () => {
-    const [loading, setLoading] = useState(false)
-
     const { cart, clearCart, getQuantity, getCartTotal, removeItem } = useContext(CartContext)
-
-    if (loading) {
-        return <h1>Se esta generando la orden</h1>
-        //spinner
-    }
 
     return (
         <div className='navbarGap centered dFlexCol cartContainer'>
             <p className='fs3'>Carrito</p>
 
-            {getQuantity() === 0 ? <p className='altFont fwBold'>No hay nada en el carro aún</p> :
+            {getQuantity() === 0 ? 
+            <div className='centered dFlexCol'>
+                <p className='altFont fwBold mt4'>No hay nada en el carro aún</p> 
+                <Link className='mt4 referrer altFont fwBold' to='/'>
+                    Agrega al carro tu mejor compañía para esta noche
+                </Link>
+            </div>
+            :
             <div className='cartViewContainer'> 
                 <div className='mt5'>
                 {cart.map( (item) => {
@@ -37,7 +37,7 @@ const Carrito = () => {
                 <button className='btn btnSecondary mt5' onClick={clearCart}>Vaciar Carrito</button>
 
                 <Link to='/checkout'>
-                    <button className='btn btnSecondary mt5 ms5'>Finalizar compra</button>                
+                    <button className='btn btnSecondary btnFinalizar'>Finalizar compra</button>                
                 </Link>
             </div>
             }

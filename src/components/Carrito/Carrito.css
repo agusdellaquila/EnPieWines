@@ -6,9 +6,22 @@
     height: 30px;
     border: 2px solid #820016;
 }
+.cartViewContainer {
+    display: flex;
+    flex-direction: column;
+}
+.btnFinalizar {
+    margin-top: 2rem;
+}
 .totalPrice {
     color: #0b8e48;
     font-weight: bold;
+}
+.referrer {
+    color: #000000;
+}
+.referrer:hover {
+    color: #820016;
 }
 @media (min-width: 1024px){
     .carritoInput {
@@ -18,12 +31,13 @@
     }
     .cartViewContainer {
         width: 40%;
+        display: block;
+    }
+    .btnFinalizar {
+        margin: 3rem 0 0 3rem !important;
     }
     .totalPrice {
         color: #0b8e48;
         font-weight: bold;
     }
-}
-@media (min-width: 576px) and (max-width: 1023px) {
-
 }

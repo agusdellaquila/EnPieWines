@@ -1,15 +1,12 @@
 import { createContext, useState, useContext } from 'react'
 import Notification from '../Notification/Notification'
 
-//createContext
 const NotificationContext = createContext()
 
 export const NotificationProvider = ( { children } ) => {
-    //state
     let [message, setMessage] = useState('') 
     let [severity, setSeverity] = useState('') 
 
-    //funciones de logica
     const setNotification = (message, severity) => {
         setMessage(message)
         setSeverity(severity)

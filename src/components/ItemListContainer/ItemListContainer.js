@@ -4,6 +4,7 @@ import { firestoreDb } from '../../services/firebase';
 import { useParams } from 'react-router-dom'
 import NoContent from '../NoContent/NoContent'
 import ItemList from '../ItemList/ItemList';
+import Spinner from '../Spinner/Spinner'
 
 const ItemListContainer = () => {
     const [products, setProducts] = useState([])
@@ -24,11 +25,16 @@ const ItemListContainer = () => {
     }, [category])
 
     if (products.length == 0) {
-        return <p className='navbarGap fs4 centered'>No hay productos</p>
+        return (
+            <div className='navbarGap centered dFlexCol'>
+                <p className='mb5 fs4 centered'>No hay productos</p>
+                <Spinner/>
+            </div>
+        )
     }
     return (
         <div className='navbarGap'>
-            {products.length > 0 ? <ItemList products={products} category={category}/> : <NoContent/>}
+            <ItemList products={products} category={category}/>
         </div>
     )
 }
