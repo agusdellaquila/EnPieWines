@@ -59,8 +59,8 @@ Dentro de react utilizamos :
 Estas funciones se utilizan para obtener y enviar y datos desde y hacia la base de datos
 
 Para conectar su propio firestore, debe crear un archivo .env donde poner sus variables y sus API keys de esta forma:
-![apikeys photo](blob:https://imgur.com/ae3812d0-47e2-437d-a246-589da102280f)
-De esta forma ya queda conectado su base de datos con la app. Recuerde agregar el .env al .gitignore asi sus keys quedan ocultas!
+![apikeys photo](https://i.imgur.com/Kmm91nP.png)
+Asi ya queda conectado su base de datos con la app. Recuerde agregar el .env al .gitignore asi sus keys quedan ocultas!
 
 ## Estructura de las páginas <a href="https://developer.mozilla.org/en-US/docs/Glossary/HTML5" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/danielcranney/readme-generator/main/public/icons/skills/html5-colored.svg" width="36" height="36" alt="HTML5" /></a>
 + **Inicio:** Cuenta con un alert para promocionar un descuento, un carrousel con banners, una sección donde se muestran productos en oferta, un slider de las bodegas participes, y el footer
